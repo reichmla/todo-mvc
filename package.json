@@ -1,0 +1,25 @@
+{
+  "name": "todo-mvc",
+  "version": "1.0.0",
+  "description": "💎  Example project using the mvc design pattern.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reallucareichmann/todo-mvc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reallucareichmann/todo-mvc/issues"
+  },
+  "homepage": "https://github.com/reallucareichmann/todo-mvc#readme",
+  "devDependencies": {
+    "webpack": "^5.2.0",
+    "webpack-cli": "^4.1.0"
+  }
+}
