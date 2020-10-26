@@ -1,21 +1,12 @@
 # todo-mvc
 💎  Example project using the mvc design pattern written in object-oriented javascript.
+You can use this app for your own use or use the code as a starting point for your own mvc app.
 
+## Model
+Used for data manipulation - model.js
 
-proposed features:
-- add todo
-- delete todo
-- clear everything
-- done todo
-- sorting
-- renaming
+## View
+Used for data manipulation - view.js
 
-- storing in local storage with objects
-
-
-using:
-- modules to separate pattern elements - will be combined by webpack
-- some simple jest tests
-
-later:
--maybe rest calls by fetch api
+## Controller
+Connect the model and view methods - controller.js
