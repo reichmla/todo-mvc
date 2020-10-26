@@ -32,7 +32,7 @@ class View {
     viewDelete(handlerFunction) {
         this.todoItems.addEventListener('click', (e) => {
             if (e.target.className === 'delete') {
-                const parentElementID = parseInt(e.target.parentElement.parentElement.id);
+                const parentElementID = parseInt(e.target.parentElement.parentElement.parentElement.id);
                 this.viewDeleteHelper(handlerFunction, parentElementID);
             }
         }, false);
@@ -44,7 +44,7 @@ class View {
     viewFavorite(handlerFunction) {
         this.todoItems.addEventListener('click', (e) => {
             if (e.target.classList.contains('favorite')) {
-                const parentElementID = parseInt(e.target.parentElement.parentElement.id);
+                const parentElementID = parseInt(e.target.parentElement.parentElement.parentElement.id);
                 this.viewFavoriteHelper(handlerFunction, parentElementID);
             }
         }, false);
@@ -62,18 +62,19 @@ class View {
                 const tempInputSubmit = document.createElement('a');
                 tempInputSubmit.textContent = 'Submit';
                 tempInputSubmit.classList.add('submit');
+                tempInputSubmit.classList.add('button');
 
                 e.target.parentElement.append(tempInput);
                 e.target.parentElement.append(tempInputSubmit);
 
                 const parentElementID = parseInt(e.target.parentElement.id);
+                let hideText = document.getElementById(parentElementID);
+                hideText = hideText.getElementsByClassName('edit')[0];
+                hideText.textContent = "";
 
                 tempInputSubmit.addEventListener('click', () => {
                     this.viewEditHelper(handlerFunction, parentElementID, tempInput.value);
                 }, false);
-
-                
-                
             }
         }, false);
     }
@@ -85,7 +86,7 @@ class View {
     viewDone(handlerFunction) {
         this.todoItems.addEventListener('click', (e) => {
             if (e.target.classList.contains('done')) {
-                const parentElementID = parseInt(e.target.parentElement.id);
+                const parentElementID = parseInt(e.target.parentElement.parentElement.id);
                 this.viewDoneHelper(handlerFunction, parentElementID);
             }
         }, false);

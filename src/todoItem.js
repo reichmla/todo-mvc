@@ -13,7 +13,7 @@ class TodoItem {
         const todoItems = document.getElementById('todoItems');
         const todoItemWrapper = document.createElement("div");
         const todoItemWrapperText = document.createElement("p");
-        
+
         todoItemWrapper.setAttribute('id', this.id);
         todoItemWrapper.setAttribute('class', 'todoItem');
 
@@ -31,13 +31,17 @@ class TodoItem {
             todoItemWrapper.classList.add('done');
         }
 
+        const controlWrapper = document.createElement("div");
+        controlWrapper.setAttribute('class', 'controls');
+        todoItemWrapper.append(controlWrapper);
+
         // add controls
-        this._addFavorite(todoItemWrapper);
-        this._addDone(todoItemWrapper);
-        this._addDelete(todoItemWrapper);        
+        this._addFavorite(controlWrapper);
+        this._addDone(controlWrapper);
+        this._addDelete(controlWrapper);        
     }
 
-    _addFavorite(todoItemWrapper) {
+    _addFavorite(controlWrapper) {
         const favorite = document.createElement("a");
         const favoriteImg = document.createElement("img");
         favoriteImg.setAttribute('src', './img/favorite.svg');
@@ -45,29 +49,25 @@ class TodoItem {
         favorite.setAttribute('class', 'favorite');
 
         favorite.append(favoriteImg);
-        todoItemWrapper.append(favorite);
+        controlWrapper.append(favorite);
 
         
     }
-    _addDone(todoItemWrapper) {
+    _addDone(controlWrapper) {
         const done = document.createElement("a");
         const doneImg = document.createElement("img");
         done.setAttribute('class', 'done');
-        done.textContent = "done";
-
         done.append(doneImg);
-        todoItemWrapper.append(done);
-
-        
+        controlWrapper.append(done);
     }
-    _addDelete(todoItemWrapper) {
+    _addDelete(controlWrapper) {
         const deleteItem = document.createElement("a");
         const deleteImg = document.createElement("img");
         deleteItem.setAttribute('class', 'controlBtn delete');
         deleteImg.setAttribute('src', './img/close.svg');
         deleteImg.setAttribute('class', 'delete');
         deleteItem.append(deleteImg);
-        todoItemWrapper.append(deleteItem);
+        controlWrapper.append(deleteItem);
     }
 }
 

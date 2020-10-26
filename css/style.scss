@@ -1,10 +1,135 @@
+// Variables
+$primary-color: #3068ea;
+$primary-color-hover: #2853b9;
+$warning-color: rgb(177, 43, 43);
+$warning-color-hover: rgb(145, 37, 37);
+$favorite-color: #fff5c7;
+$border-color: #d0d0d0;
+$border-radius: 4px;
+$background-color: #f2f2f2;
+$transition: all .2s ease;
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 body {
     width: 600px;
     margin: 0 auto;
-    font-family: Arial, Helvetica, sans-serif;
-    .controlBtn {
+    font-family:  -apple-system, BlinkMacSystemFont, Arial, Helvetica, sans-serif;
+    a {
+        text-decoration: none;
+    }
+    ul {
+        padding-left: 0;
+    }
+    input {
+        padding: 8px 4px;
+        border: 2px solid $border-color;
+        border-radius: $border-radius;
+    }
+    .button {
         display: inline-block;
-        width: 30px;
-        margin: 0 10px;
+        padding: 8px 13px;
+        background-color: $primary-color;
+        color: #fff;
+        border-radius: $border-radius;
+        cursor: pointer;
+        width: 17.8%;
+        text-align: center;
+        transition: $transition;
+        &:hover {
+            background-color: $primary-color-hover;
+        }
+    }
+    .inputSection {
+        input {
+            width: 75%;
+            display: inline-block;
+        }
+    } 
+    #todoItems {
+        display: block;
+        margin: 20px 0;
+        .todoItem {
+            background-color: $background-color;
+            border-radius: $border-radius;
+            border-color: $border-color;
+            padding: 7px 11px;
+            display: block;
+            margin: 10px 0;
+            overflow: auto;
+            transition: $transition;
+            &.done {
+                opacity: 0.7;
+                .done {
+                    background-color: $primary-color;
+                }
+            }
+            &.favorite {
+                background-color: $favorite-color;
+            }   
+            .edit {
+                float: left;
+                cursor: pointer;
+            }
+            .button {
+                margin-left: 8px;
+            }
+            .controls {
+                display: inline-block;
+                float: right;
+                overflow: auto;
+                margin-top: 12px;
+                a {
+                    display: inline-block;
+                    float: left;
+                }
+                .done {
+                    width: 23px;
+                    height: 23px;
+                    border-radius: 50%;
+                    border: 3px solid $primary-color;
+                    margin: 0 10px;
+                    margin-top: 2px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .controlBtn {
+            display: inline-block;
+            width: 26px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+    } 
+    #clearAll {
+        display: inline-block;
+        margin-top: 20px;
+        color: $warning-color;
+        cursor: pointer;
+        transition: $transition;
+        &:hover {
+            color: $warning-color-hover;
+        }
+    }
+    footer {
+        ul {
+            list-style: none;
+            li {
+                display: inline;
+                a {
+                    color: $primary-color;
+                    transition: $transition;
+                    margin-right: 10px;
+                    &:hover {
+                        color: $primary-color-hover;
+                    }
+                }
+            }    
+        }
     }
 }

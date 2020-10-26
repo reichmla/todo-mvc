@@ -1,12 +1,147 @@
+* {
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
   width: 600px;
   margin: 0 auto;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, sans-serif;
 }
 
-body .controlBtn {
+body a {
+  text-decoration: none;
+}
+
+body ul {
+  padding-left: 0;
+}
+
+body input {
+  padding: 8px 4px;
+  border: 2px solid #d0d0d0;
+  border-radius: 4px;
+}
+
+body .button {
   display: inline-block;
-  width: 30px;
+  padding: 8px 13px;
+  background-color: #3068ea;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 17.8%;
+  text-align: center;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+body .button:hover {
+  background-color: #2853b9;
+}
+
+body .inputSection input {
+  width: 75%;
+  display: inline-block;
+}
+
+body #todoItems {
+  display: block;
+  margin: 20px 0;
+}
+
+body #todoItems .todoItem {
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  border-color: #d0d0d0;
+  padding: 7px 11px;
+  display: block;
+  margin: 10px 0;
+  overflow: auto;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+body #todoItems .todoItem.done {
+  opacity: 0.7;
+}
+
+body #todoItems .todoItem.done .done {
+  background-color: #3068ea;
+}
+
+body #todoItems .todoItem.favorite {
+  background-color: #fff5c7;
+}
+
+body #todoItems .todoItem .edit {
+  float: left;
+  cursor: pointer;
+}
+
+body #todoItems .todoItem .button {
+  margin-left: 8px;
+}
+
+body #todoItems .todoItem .controls {
+  display: inline-block;
+  float: right;
+  overflow: auto;
+  margin-top: 12px;
+}
+
+body #todoItems .todoItem .controls a {
+  display: inline-block;
+  float: left;
+}
+
+body #todoItems .todoItem .controls .done {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  border: 3px solid #3068ea;
   margin: 0 10px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+body #todoItems .controlBtn {
+  display: inline-block;
+  width: 26px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+body #clearAll {
+  display: inline-block;
+  margin-top: 20px;
+  color: #b12b2b;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+body #clearAll:hover {
+  color: #912525;
+}
+
+body footer ul {
+  list-style: none;
+}
+
+body footer ul li {
+  display: inline;
+}
+
+body footer ul li a {
+  color: #3068ea;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  margin-right: 10px;
+}
+
+body footer ul li a:hover {
+  color: #2853b9;
 }
 /*# sourceMappingURL=style.css.map */
