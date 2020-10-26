@@ -6,6 +6,7 @@
 
 body {
   width: 600px;
+  max-width: 95%;
   margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, sans-serif;
 }
